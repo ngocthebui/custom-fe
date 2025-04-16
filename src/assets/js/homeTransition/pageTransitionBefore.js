@@ -3,8 +3,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const pageTransition = document.querySelector(".page-transition-before");
   const transitionLogo = document.querySelector(".transition-logo");
   const transitionBackground = document.querySelector(".transition-background");
-  const brandOverlay = document.querySelector(".brand-overlay");
-  const brandLogo = document.querySelector(".brand-name");
+  const brandOverlay = document.querySelector(".brand-name");
   const header = document.querySelector(".header");
 
   // Lấy tất cả các liên kết có hiệu ứng chuyển trang
@@ -23,22 +22,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Hiển thị container hiệu ứng chuyển trang
     pageTransition.style.visibility = "visible";
-
-    // Sao chép nội dung và style từ brand-name sang transition-logo
-    transitionLogo.textContent = brandLogo.textContent;
-    transitionLogo.style.fontSize = window.getComputedStyle(brandLogo).fontSize;
-    transitionLogo.style.fontWeight =
-      window.getComputedStyle(brandLogo).fontWeight;
-    transitionLogo.style.letterSpacing =
-      window.getComputedStyle(brandLogo).letterSpacing;
-    transitionLogo.style.fontFamily =
-      window.getComputedStyle(brandLogo).fontFamily;
-
-    // Thiết lập vị trí ban đầu cho transition-logo giống với brand-name
-    transitionLogo.style.color = "white";
-    transitionLogo.style.top = "50%";
-    transitionLogo.style.left = "50%";
-    transitionLogo.style.transform = "translate(-50%, -50%)";
 
     const isMobile = window.innerWidth < 768;
 
@@ -129,40 +112,40 @@ document.addEventListener("DOMContentLoaded", function () {
     });
 
     // 3. Logo di chuyển lên trên và thu nhỏ trong 1 giây
-    tl.to(
-      transitionLogo,
-      {
-        top: "6%",
-        scale: 0.25,
-        duration: 1,
-        ease: "power2.inOut",
-      },
-      "-=0.3"
-    ); // Bắt đầu sớm hơn 0.3s
+    // tl.to(
+    //   transitionLogo,
+    //   {
+    //     top: "6%",
+    //     scale: 0.25,
+    //     duration: 1,
+    //     ease: "power2.inOut",
+    //   },
+    //   "-=0.3"
+    // ); // Bắt đầu sớm hơn 0.3s
 
-    tl.to(
-      transitionLogo,
-      {
-        opacity: 0,
-        duration: 0.2,
-        ease: "power2.inOut",
-      },
-      "-=0.5"
-    );
+    // tl.to(
+    //   transitionLogo,
+    //   {
+    //     opacity: 0,
+    //     duration: 0.2,
+    //     ease: "power2.inOut",
+    //   },
+    //   "-=0.5"
+    // );
 
-    tl.to(
-      header,
-      {
-        display: "flex",
-        opacity: 1,
-        transform: "translateY(0)",
-        visibility: "visible",
-        y: 0,
-        duration: 0.3,
-        ease: "power2.out",
-      },
-      "-=0.3"
-    );
+    // tl.to(
+    //   header,
+    //   {
+    //     display: "flex",
+    //     opacity: 1,
+    //     transform: "translateY(0)",
+    //     visibility: "visible",
+    //     y: 0,
+    //     duration: 0.3,
+    //     ease: "power2.out",
+    //   },
+    //   "-=0.3"
+    // );
   }
 
   // Áp dụng sự kiện click cho tất cả các liên kết chuyển trang

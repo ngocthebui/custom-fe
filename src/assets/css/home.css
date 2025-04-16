@@ -170,7 +170,7 @@ body {
     color: #ff6b6b;
 }
 
-.brand-overlay {
+.brand-name {
     position: absolute;
     top: 50%;
     left: 50%;
@@ -178,16 +178,11 @@ body {
     z-index: 100;
     pointer-events: none;
     display: block;
-    /* Mặc định hiển thị trên màn hình lớn */
-}
-
-.brand-name {
     font-size: 120px;
     font-weight: 700;
-    color: white;
+    color: var(--white-color);
     letter-spacing: 15px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
-    font-family: 'Times New Roman', serif;
     text-align: center;
 }
 
@@ -224,7 +219,7 @@ body {
         position: absolute;
     }
 
-    .brand-overlay {
+    .brand-name {
         display: none;
         /* Ẩn brand-overlay trên điện thoại */
     }
