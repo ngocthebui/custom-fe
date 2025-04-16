@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Lingbao</title>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+    rel="stylesheet">
+  <link rel="stylesheet" href="../assets/css/base.css">
+  <link rel="stylesheet" href="../assets/css/home.css">
+  <link rel="stylesheet" href="../assets/css/fragments/header.css">
+  <link rel="stylesheet" href="../assets/css/fragments/hidingHeader.css">
+  <!--  Page Transition Styles-->
+  <link rel="stylesheet" href="../assets/css/homeTransition/pageTransitionBefore.css">
+</head>
+
+<body>
+  <!-- Header -->
+  <header id="header"></header>
+
+  <main class="main-content">
+    <div class="brand-overlay">
+      <h1 class="brand-name">Lingbao</h1>
+    </div>
+
+    <section class="video-section">
+      <div class="video-container">
+        <video id="promo-video" loop muted>
+          <source src="../assets/videos/lingbao-clip.mp4" type="video/mp4">
+        </video>
+        <div class="overlay"></div>
+      </div>
+      <div class="section-content">
+        <h2 class="section-title">Túi xách & Phụ kiện</h2>
+        <a href="./newPage.html" class="shop-now-btn page-transition-link" data-href="./newPage.html">Mua ngay</a>
+      </div>
+      <div class="video-btn">⏸</div>
+    </section>
+
+    <section class="slideshow-section">
+      <div class="slideshow-container">
+        <div class="slide active" style="background-image: url('../assets/images/lingbao1.jpg');">
+          <div class="overlay"></div>
+        </div>
+        <div class="slide" style="background-image: url('../assets/images/lingbao2.jpg');">
+          <div class="overlay"></div>
+        </div>
+        <div class="slide" style="background-image: url('../assets/images/lingbao3.jpg');">
+          <div class="overlay"></div>
+        </div>
+        <div class="slide" style="background-image: url('../assets/images/lingbao4.jpg');">
+          <div class="overlay"></div>
+        </div>
+        <div class="slide" style="background-image: url('../assets/images/lingbao4.jpg');">
+          <div class="overlay"></div>
+        </div>
+
+        <div class="slide-indicators">
+          <div class="indicator active" data-index="0"></div>
+          <div class="indicator" data-index="1"></div>
+          <div class="indicator" data-index="2"></div>
+          <div class="indicator" data-index="3"></div>
+          <div class="indicator" data-index="4"></div>
+        </div>
+      </div>
+      <div class="section-content">
+        <h2 class="section-title">Bộ sưu tập mới</h2>
+        <a href="./newPage.html" class="shop-now-btn page-transition-link" data-href="./newPage.html">Khám phá ngay</a>
+      </div>
+
+      <footer id="footer"></footer>"
+
+      <div class="page-transition-before">
+        <div class="transition-logo">Lingbao</div>
+        <div class="transition-background"></div>
+      </div>
+  </main>
+
+  <!-- Scripts -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+
+  <script>
+    fetch('../fragments/header.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('header').innerHTML = data;
+      });
+  </script>
+
+  <script>
+    fetch('../fragments/footer.html')
+      .then(response => response.text())
+      .then(data => {
+        document.getElementById('footer').innerHTML = data;
+      });
+  </script>
+  <script src="../assets/js/home.js"></script>
+  <!--Page transition functionality-->
+  <script src="../assets/js/homeTransition/pageTransitionBefore.js"></script>
+</body>
+
+</html>

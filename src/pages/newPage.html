@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Lingbao - Spring-Summer 2025</title>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Montserrat:wght@300;400;500&display=swap"
+        rel="stylesheet">
+    <link rel="stylesheet" href="../assets/css/base.css">
+    <link rel="stylesheet" href="../assets/css/newPage.css">
+    <link rel="stylesheet" href="../assets/css/fragments/header.css">
+    <link rel="stylesheet" href="/css/homeTransition/pageTransitionAfter.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header id="header"></header>
+
+    <!-- Video Background -->
+    <div class="video-container">
+        <video autoplay loop muted src="../assets/videos/lingbao-clip.mp4">
+            Your browser does not support the video tag.
+        </video>
+        <div class="overlay"></div>
+    </div>
+
+    <!-- Main Content -->
+    <div class="content">
+        <p class="season">Spring-Summer 2025</p>
+        <h1 class="title">A tribute to the assertive power of femininity</h1>
+        <a href="/newPage" class="discover-btn page-transition-link" data-href="/newPage">Discover</a>
+    </div>
+
+    <!-- Page Transition -->
+    <div class="page-transition-after">
+        <!-- Nội dung page transition sẽ được đặt ở đây -->
+    </div>
+
+    <script>
+        fetch('../fragments/header.html')
+            .then(response => response.text())
+            .then(data => {
+                document.getElementById('header').innerHTML = data;
+            });
+    </script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>
+    <script src="/js/homeTransition/pageTransitionAfter.js"></script>
+</body>
+
+</html>
