@@ -3,6 +3,16 @@ document.addEventListener("DOMContentLoaded", function () {
   const transitionLogo = document.querySelector(".brand-name");
   const header = document.querySelector(".header");
 
+  const isMobile = window.innerWidth < 768;
+
+  if (!isMobile) {
+    gsap.set(transitionLogo, {
+      xPercent: -50,
+      yPercent: -50,
+      scale: 1.3
+    });
+  }
+  
   // Tạo timeline GSAP cho hiệu ứng
   const tl = gsap.timeline();
 

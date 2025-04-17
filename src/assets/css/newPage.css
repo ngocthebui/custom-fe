@@ -114,10 +114,10 @@ video {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 100;
+    z-index: 9010;
     pointer-events: none;
     display: block;
-    font-size: 156px;
+    font-size: 120px;
     font-weight: 700;
     color: var(--black-color);
     letter-spacing: 15px;

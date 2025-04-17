@@ -107,9 +107,9 @@ document.addEventListener("DOMContentLoaded", function () {
       "-=0.9"
     ); // 1 - 0.5 + (2 * 0.45) - 1.5 = -0.95
 
-    tl.to(header, {
-      transform: "translateY(95%)",
-    });
+    // tl.to(header, {
+    //   transform: "translateY(95%)",
+    // });
 
     // 3. Logo di chuyển lên trên và thu nhỏ trong 1 giây
     // tl.to(
