@@ -72,6 +72,17 @@ document.addEventListener("DOMContentLoaded", function () {
     ); // Bắt đầu sớm hơn 0.3s
 
     tl.to(
+        transitionLogo,
+        {
+          color: "black",
+          duration: 0.5,
+          ease: "power2.inOut",
+          zIndex: 10003,
+        },
+        "-=0.9"
+    ); // 1 - 0.5 + (2 * 0.45) - 1.5 = -0.95
+
+    tl.to(
       header,
       {
         opacity: 0,
@@ -95,57 +106,6 @@ document.addEventListener("DOMContentLoaded", function () {
         // ease: 'power2.out'
       });
     }
-
-    tl.to(
-      transitionLogo,
-      {
-        color: "black",
-        duration: 0.5,
-        ease: "power2.inOut",
-        zIndex: 10003,
-      },
-      "-=0.9"
-    ); // 1 - 0.5 + (2 * 0.45) - 1.5 = -0.95
-
-    // tl.to(header, {
-    //   transform: "translateY(95%)",
-    // });
-
-    // 3. Logo di chuyển lên trên và thu nhỏ trong 1 giây
-    // tl.to(
-    //   transitionLogo,
-    //   {
-    //     top: "6%",
-    //     scale: 0.25,
-    //     duration: 1,
-    //     ease: "power2.inOut",
-    //   },
-    //   "-=0.3"
-    // ); // Bắt đầu sớm hơn 0.3s
-
-    // tl.to(
-    //   transitionLogo,
-    //   {
-    //     opacity: 0,
-    //     duration: 0.2,
-    //     ease: "power2.inOut",
-    //   },
-    //   "-=0.5"
-    // );
-
-    // tl.to(
-    //   header,
-    //   {
-    //     display: "flex",
-    //     opacity: 1,
-    //     transform: "translateY(0)",
-    //     visibility: "visible",
-    //     y: 0,
-    //     duration: 0.3,
-    //     ease: "power2.out",
-    //   },
-    //   "-=0.3"
-    // );
   }
 
   // Áp dụng sự kiện click cho tất cả các liên kết chuyển trang

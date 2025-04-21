@@ -7,8 +7,6 @@ document.addEventListener("DOMContentLoaded", function () {
 
   if (!isMobile) {
     gsap.set(transitionLogo, {
-      xPercent: -50,
-      yPercent: -50,
       scale: 1.3
     });
   }

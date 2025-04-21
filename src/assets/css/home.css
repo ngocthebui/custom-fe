@@ -178,10 +178,10 @@ body {
     z-index: 100;
     pointer-events: none;
     display: block;
-    font-size: 120px;
+    font-size: 80px;
     font-weight: 700;
     color: var(--white-color);
-    letter-spacing: 15px;
+    letter-spacing: 1px;
     text-shadow: 2px 2px 8px rgba(0, 0, 0, 0.5);
     text-align: center;
 }
